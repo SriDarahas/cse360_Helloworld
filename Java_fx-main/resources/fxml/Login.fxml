@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="application.controllers.LoginController">
+    <children>
+        <VBox alignment="CENTER" spacing="10.0" AnchorPane.topAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+            <Label text="Welcome to the Application" style="-fx-font-size: 18px;" />
+            <Label text="Please log in or use an invitation code." />
+            <HBox spacing="10" alignment="CENTER">
+                <VBox spacing="5" alignment="CENTER_LEFT">
+                    <Label text="Username:" />
+                    <Label text="Password:" />
+                </VBox>
+                <VBox spacing="5">
+                    <TextField fx:id="usernameField" promptText="Username" />
+                    <PasswordField fx:id="passwordField" promptText="Password" />
+                </VBox>
+            </HBox>
+            <Button fx:id="loginButton" text="Log In" onAction="#handleLogin" />
+            <Separator orientation="HORIZONTAL" prefWidth="300" />
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Invitation Code:" />
+                <TextField fx:id="inviteCodeField" promptText="Enter code here" />
+            </HBox>
+            <Button fx:id="useInviteButton" text="Use Invitation Code" onAction="#handleUseInvite" />
+            <Label fx:id="errorLabel" text="" style="-fx-text-fill: red;" />
+        </VBox>
+    </children>
+</AnchorPane>
